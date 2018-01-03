@@ -1,0 +1,1 @@
+A tool to help play StarWars: Rebellion board game.
