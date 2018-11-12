@@ -199,7 +199,7 @@ class Planet {
                 this.hide('storm');
                 this.show('empire');
                 break;
-            case 5:                                                        // Chewi
+            case 5:                                                        // Chewi - Empire loyalty under rebel siege (fleets or units)
                 this.bg.attr({fill: '#0000bf', opacity: 0.6});
                 this.hide('empire');
                 this.show('chewi');
