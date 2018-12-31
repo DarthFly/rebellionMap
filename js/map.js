@@ -149,6 +149,18 @@ class Map {
         return resources;
     }
 
+    /**
+     * Resources
+     *
+     * Blue
+     * 1   Triangle
+     * 2   Circle
+     * 3   Square
+     * Orange
+     * 4   Triangle
+     * 5   Circle
+     * 6   Square
+     */
     initPlanetData() {
         this.planetData = {};
         this.planets = {
@@ -256,7 +268,7 @@ class Map {
                 probe: '1420, 250',
                 resource: {
                     queue: 2,
-                    types: [1,5],
+                    types: [1,6],
                     x: 1540,
                     y: 310
                 }
@@ -458,19 +470,6 @@ class Map {
                 const_loyalty: 4
             }
         };
-
-        /**
-         * Resources
-         *
-         * Blue
-         * 1   Triangle
-         * 2   Circle
-         * 3   Square
-         * Orange
-         * 4   Triangle
-         * 5   Circle
-         * 6   Square
-         */
     }
 }
 

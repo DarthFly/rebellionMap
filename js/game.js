@@ -196,6 +196,10 @@ class Game {
         this.menuShown = !this.menuShown;
     }
 
+    /**
+     * See resource ids explanation inside map.js below getResources
+     * Units id is the resource id required to build it
+     */
     showRebelBuild() {
         console.log('Looking for rebel resources');
         const resources = this.map.getResources([1]);
@@ -356,7 +360,7 @@ class Game {
                 before_prepare_missions: {
                     info: '<strong>Choosing mission sets for each player</strong>: Each player selects one card from missions and show them simultaneously.<br />' +
                     'If card have Darth Vader icon - use expansion cards (remove all <strong>mission cards</strong> that do not have Leader or Vader icon) <br/>' +
-                    'Other vise use default cards - remove all cards from the <strong>missions</strong> that do not have Darth Vader icon',
+                    'Other vise use default cards - remove all cards from the <strong>missions</strong> that have Darth Vader icon',
                     next: 'prepare_missions',
                     isExpansion: true
                 } ,
@@ -501,7 +505,7 @@ class Game {
                 } ,
 
                 retrieve_leaders: {
-                    info: '<strong>Refresh phase.</strong><br />' + 'Retrieve Leaders.',
+                    info: '<strong>Refresh phase.</strong><br />' + 'Retrieve Leaders. <br />Captured leaders stays on the map as units.',
                     next: 'draw_missions'
                 } ,
 
@@ -603,7 +607,7 @@ class Game {
                 deploy_rebel: {
                     info: '<strong>Refresh phase.</strong><br />' +
                     '<strong>Deploy Units</strong>: the <strong>Rebel</strong> player slides all units one space down his build queue.<br />' +
-                    'The player deploys these units in systems that have his loyalty.',
+                    'The player deploys these units in systems that have his loyalty. Max 2 units per system/rebel base.',
                     modes: [
                         ['this', 'hideBuild']
                     ],
